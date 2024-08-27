@@ -1,0 +1,5 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = gs://clinic-testing-2023-1/api-P5-raquet-blastocist-pipette
+    version_aware = true
