@@ -1,6 +1,11 @@
 outs:
-- md5: 57fc661719fb3ec3eee612131f8a1fd2.dir
-  size: 20652928
-  nfiles: 1
-  hash: md5
+- hash: md5
   path: Data
+  files:
+  - relpath: clip1.mp4
+    md5: 3821316d2fe12b5352c4974dd1d7024b
+    size: 20652928
+    cloud:
+      storage:
+        etag: 08d5c0cffc899488031001
+        version_id: '1724724104388693'

@@ -1,6 +1,11 @@
 outs:
-- md5: 1b48fdef0a117d50aad995a3441dd6b5.dir
-  size: 92776277
-  nfiles: 1
-  hash: md5
+- hash: md5
   path: Weights
+  files:
+  - relpath: P5-raquet-blastocist-pipette-v0.0.1.pt
+    md5: bb8c25049b7f91a58a66af68e387f1f0
+    size: 92776277
+    cloud:
+      storage:
+        etag: 0880a8d1808a9488031001
+        version_id: '1724724112806912'
