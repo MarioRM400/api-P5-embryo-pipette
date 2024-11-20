@@ -6,9 +6,11 @@ def process_image(image):
 
 # Mapping of class IDs to class names (update this as needed)
 CLASS_NAMES = {
-    0: "blastocist",
-    1: "raquet",
-    2: "pipette_tip",
+    0: "embryo",
+    1: "pipette_tip",
+    2: "racket",
+    3: "z_embryo",
+    4: "z_pippet_tip",
 }
 
 
