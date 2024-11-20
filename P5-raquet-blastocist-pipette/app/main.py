@@ -15,7 +15,7 @@ weights_path = os.path.join(current_path, "Weights", "CVIT-pippete_tip-embryo-ra
 # Initialize the YOLOv5 model
 model = YOLOv5Model(weights_path)
 
-@app.post("/predict/")
+@app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     # Read the image file
     image_bytes = await file.read()
