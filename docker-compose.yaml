@@ -1,0 +1,36 @@
+networks:
+  backend-api:
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+services:
+  api:
+    container_name: raquet-blastocist-pipette-api-compose
+    image: api-raquet-blastocist-pipette:${TAG}
+    build:
+      context: ./P5-raquet-blastocist-pipette
+      dockerfile: Dockerfile
+    ports:
+      - 9051:9051
+    runtime: nvidia
+    networks:
+      backend-api:
+        ipv4_address: 172.30.0.3
+    healthcheck:
+      test: curl --fail http://172.30.0.3:9051/predict/ || exit 1
+      interval: 180s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+  initialization:
+    container_name: first-inference-api-raquet-blastocist-pipette
+    image: init-api-raquet-blastocist-pipette:${TAG}
+    build:
+      context: ./initialization
+      dockerfile: Dockerfile
+    networks:
+      backend-api:
+        ipv4_address: 172.30.0.2
+    depends_on:
+      api:
+        condition: service_healthy

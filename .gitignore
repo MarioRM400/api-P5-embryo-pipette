@@ -1,3 +1,7 @@
-P5-raquet-blastocist-pipette/Data
-P5-raquet-blastocist-pipette/Weights
 P5-raquet-blastocist-pipette/clients/results
+**/__pycache__/
+.vscode/*
+!.vscode/launch.json
+.venv
+output/*.jpg
+P5-raquet-blastocist-pipette/app/weights

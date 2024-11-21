@@ -10,7 +10,7 @@ import os
 app = FastAPI()
 
 current_path = os.getcwd()
-weights_path = os.path.join(current_path, "Weights", "CVIT-pippete_tip-embryo-racket-V0.0.1-extended.pt")
+weights_path = os.path.join(current_path, "app", "weights", "CVIT-pippete_tip-embryo-racket-V0.0.1-extended.pt")
 
 # Initialize the YOLOv5 model
 model = YOLOv5Model(weights_path)
@@ -27,4 +27,4 @@ async def predict(file: UploadFile = File(...)):
     # Convert results to dict
     results_dict = convert_results_to_dict(results)
     
-    return {"response": results_dict}
+    return results_dict

@@ -27,10 +27,11 @@ RUN pip install uvicorn
 RUN pip install pillow
 RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 RUN pip install yolov5
+RUN pip install huggingface_hub==0.24.7  
 # RUN pip3 install -q --no-cache-dir -r requirements.txt
 
 ADD app/ app/
-ADD Weights/ Weights/
+ADD app/weights/ app/weights/
 
 EXPOSE 9051
 
