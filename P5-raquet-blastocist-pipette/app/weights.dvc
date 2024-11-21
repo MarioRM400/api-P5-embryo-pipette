@@ -1,6 +1,11 @@
 outs:
-- md5: 325d68f059bb017798648c49861ff2ea.dir
-  size: 92845120
-  nfiles: 1
-  hash: md5
+- hash: md5
   path: weights
+  files:
+  - relpath: CVIT-pippete_tip-embryo-racket-V0.0.1-extended.pt
+    md5: e0ffe5f0b07f2061ba9b70ef10d6f2f7
+    size: 92845120
+    cloud:
+      storage:
+        etag: 08eb8186869aec89031001
+        version_id: '1732150122610923'
